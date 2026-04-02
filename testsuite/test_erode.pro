@@ -146,6 +146,13 @@ TEST_ERODE_THEN_DILATE, cumul_errors
 TEST_ERODE_1D, cumul_errors
 TEST_ERODE_AXES, cumul_errors
 ;
+; AC 2026-04-02
+;
+if (cumul_errors GT 0) AND ~KEYWORD_SET(no_exit) then begin
+    MESSAGE, 'There are known bugs in ERODE() that have to be fixed'
+    EXIT, status=77
+endif
+;
 ; ----------------- final message ----------
 ;
 BANNER_FOR_TESTSUITE, 'TEST_ERODE', cumul_errors
