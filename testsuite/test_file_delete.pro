@@ -24,7 +24,7 @@ end
 pro TEST_FILE_DELETE, cumul_errors, test=test, help=help, verbose=verbose
 
 ; AC 2026-04-02 temporary short-cut for tests on MSwin
-if (!version.os_family eq 'Windows') then exist, status=77
+if (!version.os_family eq 'Windows') then EXIT, status=77
 
 errors = 0
 

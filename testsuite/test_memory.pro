@@ -4,7 +4,7 @@
 pro test_memory
 ;
 ; AC 2026-04-02 temporary short-cut for tests on MSwin
-if (!version.os_family eq 'Windows') then exist, status=77
+if (!version.os_family eq 'Windows') then EXIT, status=77
 ;
 mem = memory(/curr)
   a = dblarr(9999999)
